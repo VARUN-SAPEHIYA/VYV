@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+    background:black;
+    font-family: 'Bad Script', cursive;
+    overflow: hidden;
+}
+h1{
+    margin: 0;
+    padding: 0;
+    color:#111;
+    font-size: 16em;
+}
+h1 span{
+    display: table-cell;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    animation: animate 2s linear infinite;
+}
+@keyframes animate{
+    0%,100%{
+        color:#00b3ff;
+        filter: blur(5px);
+        box-shadow: 0 0 10px,
+                    0 0 20px,
+                    0 0 40px,
+                    0 0 80px,
+                    0 0 200px,
+                    0 0 140px,
+                    0 0 180px,
+    }
+    5%,95%{
+        color:#111;
+        filter: blur(0);
+        box-shadow: 0 0 10px none;
+    }
+}
+h1 span:nth-child(1){
+    animation-delay: 0s;
+    
+}
+h1 span:nth-child(2){
+    animation-delay: 0.25s;
+}
+h1 span:nth-child(3){
+    animation-delay: 0.5s;
+}
+h1 span:nth-child(4){
+    animation-delay: 0.75s;
+}
+h1 span:nth-child(5){
+    animation-delay: 1s;
+}
+h1 span:nth-child(6){
+    animation-delay: 1.25s;
+}
+h1 span:nth-child(7){
+    animation-delay: 1.5s;
+}
+
+button{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    height: 60px;
+    width: 200px;
+    margin: -70px 90px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: rgb(51, 50, 50);
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+button:first-child:hover{
+    background: linear-gradient(90deg,#03a9f4,#f441a5,yellow,#03a9f4);
+    background-size: 400%;
+}
+button:last-child:hover{
+    background: linear-gradient(90deg,#fa7199,#f5ce62,#e43603,#fa7199);
+    background-size: 400%;
+}
+button:first-child::before,
+button:last-child::before{
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 50px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+button:hover:first-child::before,
+button:hover:last-child::before{
+    opacity: 1;
+    z-index: -1;
+}
+button:hover{
+    z-index: 1;
+    animation: glow 8s linear infinite;
+}
+@keyframes glow{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+h3 {
+    color: red;
+    margin-top: 44px;
+    height: 20px;
+    padding: 20px;
+    display: grid;
+    margin-left: 90px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+h2 {
+    color: #A5799B;
+    margin-top: -55px;
+    height: 20px;
+    padding: 20px;
+    display: grid;
+    margin-left: 478px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
